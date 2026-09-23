@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Musicmag - Stories and Interviews in the world of Music</title>
+</head>
+<body>
+  {# 
+    Création d'une variable latestStories
+    - On va chercher toutes les entries dans Craft qui sont dans la section "stories"
+    - On les veut toutes > on appelle la methode "all()". Les autres méthodes sont one(), collect(), ids(), count()
+    - Craft nous renvoie une gros tableau d'objets
+  #}
+  {% set latestStories = craft.entries()
+    .section("stories")
+    .all() %}
+
+  {# 
+    On boucle sur le tableau d'objets, chaque fois qu'on en trouve un, on le met dans une variable "item" et on affiche les propriétés de chaque objet avec les "handles" des champs qu'on a attachés aux entries via le entry_type de la section
+  #}
+  {% for item in latestStories %}
+
+    {# 
+      Attention, les champs relationnels dans Craft renvoient toujours des tableaux (array) d'objets. Ici un tableau avec un seul objet asset (image dans ce cas) dedans. On retourne le premier (et seul) objet asset du tableau avec .one() (pas besoin de plus) 
+    #}
+    {% set img = item.storyImage.one() %}
+
+    {# 
+      - Une fois qu'on a l'objet asset, on peut appeller ses champs (url, alt, etc.). 
+      - En utilisant getUrl et lui passant un objet, on peut demander à Craft de resizer dynamiquement nos images 
+    #}
+    <article>
+      <img 
+        src="{{ img.getUrl({ width: 1024, height: 1024 }) }}" 
+        alt="{{ img.alt }}">
+      <p>{{ item.storyType.value }}</p>
+      <h2>
+        <a href="">{{ item.title }}</a>
+      </h2>
+    </article>
+
+  {% else %}
+
+    <p>No stories found</p>  
+
+  {% endfor %}
+
+</body>
+</html>

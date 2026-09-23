@@ -1,0 +1,10 @@
+/.env
+/.idea
+/vendor
+.DS_Store
+
+# DB backups
+/db_dumps
+
+# User uploaded assets
+/web/uploads

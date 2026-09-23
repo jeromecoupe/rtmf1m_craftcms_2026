@@ -1,0 +1,22 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 6273a8af-b5b8-4d44-9914-d9b62c3cf2d7 # Stories
+handle: stories
+maxAuthors: 1
+minAuthors: 1
+name: Stories
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  5f666bf0-c4ad-4e4b-b887-635f9576f5dc: # musicmag
+    enabledByDefault: true
+    hasUrls: true
+    template: _pages/stories-detail.twig
+    uriFormat: 'stories/{slug}'
+type: channel

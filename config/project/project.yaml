@@ -1,0 +1,37 @@
+dateModified: 1790083007
+email:
+  fromEmail: jercoupe@gmail.com
+  fromName: musicmag
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  storiesImages:
+    hasUrls: true
+    name: 'Stories Images'
+    settings:
+      path: '@assetsBasePath/stories_images'
+    type: craft\fs\Local
+    url: '@assetsBaseUrl/stories_images'
+meta:
+  __names__:
+    5f666bf0-c4ad-4e4b-b887-635f9576f5dc: musicmag # musicmag
+    7e0f4cfb-96bd-430e-93b7-67ee51af6f93: musicmag # musicmag
+    69d50bea-edb7-43b6-9603-ae2e1ea756c6: Image # Image
+    4247c2e4-8237-46f6-9b43-21dbc8db81fe: Stories # Stories
+    6273a8af-b5b8-4d44-9914-d9b62c3cf2d7: Stories # Stories
+    b125a23d-fac4-41fe-8759-44d179a91f4f: 'Home Page' # Home Page
+    c75e7b14-fa78-4e38-8ef7-1e0ced02d973: Homepage # Homepage
+    c8149cdb-0fbf-4155-bd16-53db60c8a979: 'Stories Images' # Stories Images
+    e672f515-d214-41e1-a0ce-5c1833151c60: Type # Type
+system:
+  edition: solo
+  live: true
+  name: musicmag
+  schemaVersion: 5.11.0.2
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true
