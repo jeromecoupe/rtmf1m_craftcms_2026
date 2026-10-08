@@ -1,0 +1,71 @@
+/* ===========================================
+=mobile nav
+=========================================== */
+
+.mobilenav {
+  --mobilenav-color-txt: var(--color-neutral-100);
+  --mobilenav-animation-duration: 0.3s;
+  --mobilenav-stagger-delay: 0.18s;
+  --mobilenav-animation-easing: linear(
+    0,
+    0.009 1.4%,
+    0.032 2.8%,
+    0.131 6%,
+    0.265 9.1%,
+    0.675 17.6%,
+    0.88 22.8%,
+    0.953 25.2%,
+    1.014 27.7%,
+    1.062 30.3%,
+    1.094 32.9%,
+    1.121 37.2%,
+    1.121 42.2%,
+    1.102 46.7%,
+    1.019 61.2%,
+    0.989 71.5%,
+    0.985 81.1%,
+    1
+  );
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  gap: 6px;
+}
+
+.mobilenav__item {
+  overflow: clip;
+}
+
+.mobilenav__link {
+  display: block;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.2;
+  font-family: var(--fontstack-alt);
+  color: var(--mobilenav-color-txt);
+  text-decoration: none;
+
+  translate: -60px 0;
+  opacity: 0;
+
+  transition-property: translate, opacity;
+  transition-duration: var(--mobilenav-animation-duration);
+  transition-timing-function: var(--mobilenav-animation-easing);
+  transition-delay: calc(var(--mobilenav-stagger-delay) * var(--navindex));
+}
+
+dialog[open] .mobilenav__link {
+  translate: 0 0;
+  opacity: 1;
+
+  @starting-style {
+    translate: -60px 0;
+    opacity: 0;
+  }
+}

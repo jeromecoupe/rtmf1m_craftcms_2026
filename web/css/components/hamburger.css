@@ -1,0 +1,23 @@
+/* ===========================================
+=hamburger
+=========================================== */
+
+.hamburger {
+  cursor: pointer;
+  display: inline-block;
+  border: 1px solid oklch(100% 0 0 / 24%);
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+
+  transition: border-color 0.2s ease-out;
+
+  &:hover,
+  &:focus {
+    border-color: white;
+  }
+}
+
+.hamburger img {
+  display: block;
+}

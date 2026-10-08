@@ -10,8 +10,11 @@ A small web project to learn the basics of Craft CMS by Pixel&Tonic.
 - [x] First sections (home and stories), entry types, fields and entries
 - [x] Introduction to Twig (3 types of tags)
 - [x] Retrieving some entries and displaying fields
-- [ ] Modular DRY approach: includes and template inheritance
-- [ ] Home page template
-- [ ] Story page template
+- [x] Add CSS, JS and non user uploaded asssets
+- [x] Modular DRY approach: includes and template inheritance
+- [ ] Header and navigation
+- [ ] Footer and navigation
+- [ ] Home page fields and template
 - [ ] Story archives template
-- [ ] Magazine template
+- [ ] Story detail page fields and template
+- [ ] Magazine page fields and template

@@ -1,0 +1,13 @@
+/* ===========================================
+=fluid images
+=========================================== */
+
+.fluidimg {
+  display: block;
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+.fluidimg--full {
+  inline-size: 100%;
+}

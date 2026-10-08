@@ -1,50 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Musicmag - Stories and Interviews in the world of Music</title>
-</head>
-<body>
-  {# 
-    Création d'une variable latestStories
-    - On va chercher toutes les entries dans Craft qui sont dans la section "stories"
-    - On les veut toutes > on appelle la methode "all()". Les autres méthodes sont one(), collect(), ids(), count()
-    - Craft nous renvoie une gros tableau d'objets
-  #}
-  {% set latestStories = craft.entries()
-    .section("stories")
-    .all() %}
+{# template to extend #}
+{% extends "layouts/base.twig" %}
 
-  {# 
-    On boucle sur le tableau d'objets, chaque fois qu'on en trouve un, on le met dans une variable "item" et on affiche les propriétés de chaque objet avec les "handles" des champs qu'on a attachés aux entries via le entry_type de la section
-  #}
-  {% for item in latestStories %}
+{# content block #}
+{% block content %}
+  <main class="maincontent">
+    
+    {# intro section #}
+    <div class="section">
+      <div class="wrapper wrapper--md">
+        <div class="homeintro">
+          <div class="homeintro__main">
+            <h1 class="sr-only">Musicmag</h1>
+            <img
+              src="img/biglogo.svg"
+              class="homeintro__logo"
+              alt="Musicmag logo"
+              width="696"
+              height="96"
+              decoding="async" />
+            <p class="homeintro__tagline">
+              <span>From the heart of Belgium</span>
+            </p>
+          </div>
+          <p class="homeintro__text">
+            Online articles, interviews and stories about the world of music.
+            Created by humans for humans.
+          </p>
+        </div>
+      </div>
+    </div>
 
-    {# 
-      Attention, les champs relationnels dans Craft renvoient toujours des tableaux (array) d'objets. Ici un tableau avec un seul objet asset (image dans ce cas) dedans. On retourne le premier (et seul) objet asset du tableau avec .one() (pas besoin de plus) 
+    {# 1. LATEST STORIES #}
+    {#
+      - On va chercher des entries 
+      - Qui sont dans la section "stories"
+      - Classées par pubDate décroissantes
+      - On limite à 2 entries
     #}
-    {% set img = item.storyImage.one() %}
 
+    {% set latestStoriesQuery = craft.entries()
+      .section("stories")
+      .orderBy("postDate DESC")
+      .limit(2) %}
+    
+    {# On veut uniquement les IDs des entries pour filtrer les stories random plus tard > on appelle .ids() #}
+    {% set latestStoriesIds = latestStoriesQuery.ids() %}
+    {# On veut les entries sous forme de tableau d'objets avec les champs etc. > on appelle .all() #}
+    {% set latestStories = latestStoriesQuery.all() %}
+    
+    <div class="section">
+      <div class="wrapper">
+        <h2 class="smalltitle">Latest Stories</h2>
+        {#
+          On boucle sur le tableau d'objets, chaque fois qu'on en trouve un, on le met dans une variable "item" et on affiche les propriétés de chaque objet avec les "handles" des champs qu'on a attachés aux entries via le entry_type de la section
+
+          Inclusion du template "includes/storycard.twig"
+          - on lui passe la variable 'item' qu'on assigne à la variable 'entry'
+          - on l'isole du contexte de Twig (cet include n'a accès à aucune variable à part celles qu'on lui passe explicitement)
+        #}
+        {% for item in latestStories %}
+
+          {% if loop.first %}<ul class="grid grid--gap grid--2cols-md">{% endif %}
+            <li>
+              {{ include("includes/storycard.twig", {
+                entry: item,
+                isBig: true
+              }, with_context: false) }}
+            </li>
+          {% if loop.last %}</ul>{% endif %}
+
+        {% else %}
+
+          <p>No stories found</p>
+
+        {% endfor %}
+      </div>
+    </div>
+
+    {# 2. RANDOM STORIES #}
     {# 
-      - Une fois qu'on a l'objet asset, on peut appeller ses champs (url, alt, etc.). 
-      - En utilisant getUrl et lui passant un objet, on peut demander à Craft de resizer dynamiquement nos images 
+      Création d'une variable randomStories
+      - On va chercher des entries 
+      - Qui sont dans la section "stories"
+      - Classées par random
+      - Limité à 6 (on a besoin de 4 entries pour l'affichage et on peut avoir deux doublons max avec les latest entries > on en prend 6 pour être certains)
+      - On utilise .collect() plutôt que .all() pour avoir une collection, qui nous donne accès à des méthodes pratiques pour manipuler des collections: ici .whereNotIn() et .slice()
     #}
-    <article>
-      <img 
-        src="{{ img.getUrl({ width: 1024, height: 1024 }) }}" 
-        alt="{{ img.alt }}">
-      <p>{{ item.storyType.value }}</p>
-      <h2>
-        <a href="">{{ item.title }}</a>
-      </h2>
-    </article>
+    {% set randomStories = craft.entries()
+      .section("stories")
+      .orderBy("RAND()")
+      .limit(6)
+      .collect() %}
 
-  {% else %}
+    {% set randomStoriesFiltered = randomStories
+      .whereNotIn('id', latestStoriesIds)
+      .slice(0, 4) %}
+    
+    <div class="section">
+      <div class="wrapper">
+        <h2 class="smalltitle">From the archives</h2>
+        {% for item in randomStoriesFiltered %}
 
-    <p>No stories found</p>  
+          {% if loop.first %}<ul class="grid grid--gap grid--2cols-md grid--4cols-lg">{% endif %}
+            <li>
+              {{ include("includes/storycard.twig", {
+                entry: item
+              }, with_context: false) }}
+            </li>
+          {% if loop.last %}</ul>{% endif %}
 
-  {% endfor %}
+        {% else %}
 
-</body>
-</html>
+          <p>No stories found</p>
+
+        {% endfor %}
+      </div>
+    </div>
+
+  </main>
+{% endblock %}

@@ -1,0 +1,9 @@
+/* ===========================================
+=lead
+=========================================== */
+
+.lead {
+  color: var(--color-txt-highlight);
+  font-size: var(--fontsize-md);
+  line-height: 1.44;
+}

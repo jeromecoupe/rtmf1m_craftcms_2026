@@ -1,0 +1,14 @@
+/* ===========================================
+=screen reader only
+=========================================== */
+
+/* invisible on screens, accessible for screen readers */
+
+.sr-only {
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

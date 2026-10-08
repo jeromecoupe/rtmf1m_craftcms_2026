@@ -1,0 +1,63 @@
+{# ===================================
+variables and logic 
+=================================== #}
+
+{# 
+  Attention, les champs relationnels dans Craft renvoient toujours des tableaux (array) d'objets. Ici un tableau avec un seul objet asset (l'image dans ce cas). 
+  - On retourne le premier (et seul) objet asset du tableau avec .one() (pas besoin de plus) 
+  - Une fois qu'on a l'objet asset, on peut appeller ses champs (url, alt, etc.). 
+  - En utilisant getUrl et lui passant un objet, on peut demander à Craft de resizer dynamiquement nos images 
+#}
+
+{# Date formats in twig: https://www.php.net/manual/en/datetime.format.php #}
+
+{% set img = entry.storyImage.one() ?? null %}
+{% set alt = img.alt ?? null %}
+{% set url = entry.url ?? null %}
+{% set title = entry.title ?? null %}
+{% set type = entry.storyType.value ?? null %}
+{% set date = entry.postDate ?? null %}
+
+{# We need a different CSS class and different image dimensions if we pass the 'isBig: true' parameter to this include #}
+{% set bigClass = "" %}
+{% set imgWidth = 600 %}
+{% set imgHeight = 800 %}
+{% if (isBig is defined and isBig == true) %}
+  {% set bigClass = "storycard--big" %}
+  {% set imgWidth = 1024 %}
+  {% set imgHeight = 1024 %}
+{% endif %}
+
+
+{# ===================================
+template (as dumb as possible) 
+=================================== #}
+
+<article class="storycard {{ bigClass }}">
+  <div class="storycard__media">
+    <a href="{{ url }}">
+      {% if img %}
+        <img
+          src="{{ img.getUrl({ width: imgWidth, height: imgHeight }) }}"
+          class="storycard__img fluidimg"
+          width="{{ imgWidth }}"
+          height="{{ imgHeight }}"
+          decoding="async"
+          loading="lazy"
+          alt="{{ alt }}" />
+      {% endif %}
+    </a>
+  </div>
+  <div class="storycard__body">
+    <p class="storycard__type">{{ type }}</p>
+    <h2 class="storycard__title">
+      <a href="{{ url }}">{{ title }}</a>
+    </h2>
+    <p class="storycard__date">
+      <time datetime="{{ date|date("Y-m-d") }}">
+        {{ date|date("F d, Y") }}
+      </time>
+    </p>
+  </div>
+</article>
+

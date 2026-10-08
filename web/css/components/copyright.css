@@ -1,0 +1,9 @@
+/* ===========================================
+=copyright
+=========================================== */
+
+.copyright {
+  margin: 0;
+  padding-block: 18px;
+  color: var(--color-txt-muted);
+}

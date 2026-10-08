@@ -1,0 +1,123 @@
+/* ===========================================
+=storycard
+=========================================== */
+
+.storycard {
+  --storycard-title-fontsize: clamp(
+    21/16 * 1rem,
+    1.213rem + 0.319vi,
+    24/16 * 1rem
+  );
+}
+
+.storycard__link {
+  display: block;
+  text-decoration: none;
+}
+
+.storycard__media {
+  overflow: clip;
+  margin-block-end: 24px;
+
+  position: relative;
+}
+
+.storycard__img {
+  scale: 1;
+  z-index: 1;
+
+  transition: scale 0.24s ease-out;
+
+  a:hover & {
+    scale: 1.018;
+  }
+}
+
+.storycard__type {
+  color: var(--color-accent);
+  margin-block-end: 0.18em;
+  text-transform: uppercase;
+  font-size: var(--fontsize-sm);
+  font-weight: 600;
+}
+
+.storycard__title {
+  font-weight: 450;
+  font-size: var(--storycard-title-fontsize);
+  line-height: 1.38;
+  font-family: var(--fontstack-alt);
+  color: var(--color-txt-highlight);
+  margin-block-end: 6px;
+
+  max-inline-size: 24ch;
+  text-wrap: balance;
+
+  & > a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+    text-decoration-skip-ink: all;
+  }
+
+  & > a:hover,
+  & > a:focus {
+    transition: text-decoration-color 0.2s ease-out;
+    text-decoration-color: var(--color-accent);
+  }
+}
+
+.storycard__date {
+  color: var(--color-txt-secondary);
+}
+
+/* ===========================================
+=storycard big variant
+=========================================== */
+
+.storycard--big {
+  --storycard-title-fontsize: clamp(
+    24/16 * 1rem,
+    1.234rem + 0.851vi,
+    32/16 * 1rem
+  );
+}
+
+.storycard--big .storycard__media::before {
+  --icon-padding: 30px;
+  --icon-size: 18px;
+  --icon-inset: 0;
+
+  position: absolute;
+  inset-inline-end: var(--icon-inset);
+  inset-block-end: var(--icon-inset);
+  z-index: 2;
+
+  content: "";
+  padding: var(--icon-padding);
+  background-color: var(--color-accent);
+  background-image: url(../../img/icon_more.svg);
+  background-size: var(--icon-size);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  opacity: 0;
+
+  transition: opacity 0.2s ease-out;
+
+  @media (width >= 1024px) {
+    --icon-padding: 36px;
+    --icon-size: 18px;
+  }
+
+  @media (width >= 1440px) {
+    --icon-padding: 42px;
+    --icon-size: 24px;
+  }
+}
+
+.storycard--big .storycard__media:hover::before {
+  translate: 0 0;
+  opacity: 1;
+}

@@ -1,0 +1,28 @@
+/* ===========================================
+=colors
+=========================================== */
+
+:root {
+  --color-neutral-100: oklch(17% 0.00201 106.765);
+  --color-neutral-200: oklch(30% 0.00201 106.765);
+  --color-neutral-300: oklch(40% 0.00201 106.765);
+  --color-neutral-400: oklch(50% 0.00201 106.765);
+  --color-neutral-500: oklch(60% 0.00201 106.765);
+  --color-neutral-600: oklch(70% 0.00201 106.765);
+  --color-neutral-700: oklch(80% 0.00201 106.765);
+  --color-neutral-800: oklch(90% 0.00201 106.765);
+
+  --color-green-base: #2de8c0;
+
+  /* incident variables */
+  --color-bkg-primary: var(--color-neutral-100);
+
+  --color-txt-primary: var(--color-neutral-700);
+  --color-txt-highlight: white;
+  --color-txt-secondary: var(--color-neutral-500);
+  --color-txt-muted: var(--color-neutral-400);
+
+  --color-border-primary: oklch(255% 0 0 / 12%);
+
+  --color-accent: var(--color-green-base);
+}

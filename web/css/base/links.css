@@ -1,0 +1,16 @@
+/* ===========================================
+=links
+=========================================== */
+
+a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-color: oklch(from var(--color-accent) l c h / 60%);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.24ch;
+
+  &:hover,
+  &:focus {
+    text-decoration-color: var(--color-accent);
+  }
+}

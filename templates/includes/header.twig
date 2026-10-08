@@ -1,0 +1,111 @@
+<header class="siteheader">
+  <div class="wrapper">
+    <div class="siteheader__content">
+      <div class="siteheader__logo">
+        <img
+          src="img/logo.svg"
+          alt="Musicmag"
+          width="102"
+          height="13"
+          decoding="async" />
+      </div>
+      <div class="siteheader__nav">
+        <nav>
+          <ul class="mainnav">
+            <li class="mainnav__item">
+              <a
+                class="mainnav__link is-active"
+                href="/">
+                Home
+              </a>
+            </li>
+            <li class="mainnav__item">
+              <a
+                class="mainnav__link"
+                href="stories.html">
+                Stories
+              </a>
+            </li>
+            <li class="mainnav__item">
+              <a
+                class="mainnav__link"
+                href="magazine.html">
+                Magazine
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="siteheader__hamburger">
+        <button
+          class="hamburger"
+          type="button"
+          commandfor="mobilemenu"
+          command="show-popover">
+          <span class="sr-only">Open navigation</span>
+          <img
+            src="img/icon_hamburger.svg"
+            width="36"
+            height="36"
+            aria-hidden="true"
+            alt="" />
+        </button>
+      </div>
+    </div>
+  </div>
+  <dialog
+    class="mobilemenu"
+    id="mobilemenu"
+    popover>
+    <div class="mobilemenu__content">
+      <div class="mobilemenu__actions">
+        <button
+          class="mobilemenu__close"
+          type="button"
+          commandfor="mobilemenu"
+          command="hide-popover">
+          <span class="sr-only">Close navigation</span>
+          <img
+            src="img/icon_close.svg"
+            width="36"
+            height="36"
+            aria-hidden="true"
+            alt="" />
+        </button>
+      </div>
+      <div class="mobilemenu__main">
+        <nav>
+          <ul class="mobilenav">
+            <li
+              class="mobilenav__item"
+              style="--navindex: 1">
+              <a
+                class="mobilenav__link"
+                href="/">
+                Home
+              </a>
+            </li>
+            <li
+              class="mobilenav__item"
+              style="--navindex: 2">
+              <a
+                class="mobilenav__link"
+                href="stories.html">
+                Stories
+              </a>
+            </li>
+            <li
+              class="mobilenav__item"
+              style="--navindex: 3">
+              <a
+                class="mobilenav__link"
+                href="magazine.html">
+                Magazine
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </dialog>
+</header>

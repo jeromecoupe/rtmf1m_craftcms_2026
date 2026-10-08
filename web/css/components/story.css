@@ -1,0 +1,132 @@
+/* ===========================================
+=story
+=========================================== */
+
+/* ===========================================
+=story header
+=========================================== */
+
+.story__header {
+  --storyheader-gap: 18px;
+
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: end;
+  gap: var(--storyheader-gap);
+}
+
+.story__headermain {
+  grid-column: 1 / -1;
+
+  @media (width >= 750px) {
+    grid-column: 3 / -1;
+  }
+
+  @media (width >= 1024px) {
+    grid-column: 5 / -1;
+    grid-row: 1 / 2;
+  }
+
+  @media (width >= 1440px) {
+    grid-column: 5 / -2;
+  }
+}
+
+.story__headerinfo {
+  grid-column: 1 / -1;
+
+  @media (width >= 750px) {
+    grid-column: 3 / -1;
+  }
+
+  @media (width >= 1024px) {
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+  }
+}
+
+.story__type {
+  color: var(--color-accent);
+  margin-block-end: 0.18em;
+  text-transform: uppercase;
+  font-size: var(--fontsize-sm);
+  font-weight: 600;
+}
+
+.story__title {
+  --storytitle-fontsize: clamp(38/16 * 1rem, 1.994rem + 1.743vi, 57/16 * 1rem);
+
+  font-weight: 450;
+  font-size: var(--storytitle-fontsize);
+  line-height: 1.2;
+  font-family: var(--fontstack-alt);
+  color: var(--color-txt-highlight);
+  margin-block-end: 0;
+}
+
+.story__date {
+  margin-block: 0;
+  color: var(--color-txt-highlight);
+}
+
+.story__author {
+  color: var(--color-txt-primary);
+}
+
+/* ===========================================
+=story banner
+=========================================== */
+
+.story__banner {
+  --storybanner-margin-block: 30px;
+
+  margin-block: var(--storybanner-margin-block);
+
+  @media (width >= 750px) {
+    --storybanner-margin-block: 60px;
+
+    margin-block: var(--storybanner-margin-block);
+  }
+}
+
+/* ===========================================
+=story body
+=========================================== */
+
+.story__body {
+  --storybody-colgap: 18px;
+  --storybody-rowgap: clamp(30px, 4vi, 60px);
+
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: end;
+  gap: var(--storybody-rowgap) var(--storybody-colgap);
+}
+
+.story__bodytext {
+  grid-column: 1 / -1;
+
+  @media (width >= 750px) {
+    grid-column: 3 / -1;
+  }
+
+  @media (width >= 1440px) {
+    grid-column: 5 / -2;
+  }
+}
+
+.story__bodyquote {
+  grid-column: 1 / -1;
+
+  @media (width >= 750px) {
+    grid-column: 1 / -2;
+  }
+
+  @media (width >= 1440px) {
+    grid-column: 4 / -2;
+  }
+}
+
+.story__bodymedia {
+  grid-column: 1 / -1;
+}

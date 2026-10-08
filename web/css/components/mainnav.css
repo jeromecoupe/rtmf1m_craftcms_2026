@@ -1,0 +1,28 @@
+/* ===========================================
+=mainnav
+=========================================== */
+
+.mainnav {
+  --mainnav-gap: 42px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: var(--mainnav-gap);
+}
+
+.mainnav__link {
+  color: var(--color-txt-highlight);
+  font-weight: 450;
+  text-decoration: none;
+}
+
+.mainnav__link.is-active {
+  text-decoration: none;
+  color: var(--color-accent);
+}

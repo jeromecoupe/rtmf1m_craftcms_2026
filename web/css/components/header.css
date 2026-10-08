@@ -1,0 +1,48 @@
+/* ===========================================
+=header
+=========================================== */
+
+.siteheader {
+  --siteheader-padding: 24px;
+
+  background-color: var(--color-bkg-primary);
+
+  @media (width >= 750px) {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    background-color: oklch(from var(--color-bkg-primary) l c h / 50%);
+    backdrop-filter: blur(12px);
+  }
+}
+
+.siteheader__content {
+  padding-block: var(--siteheader-padding);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 18px;
+}
+
+.siteheader__logo {
+  margin-inline-end: auto;
+}
+
+.siteheader__nav {
+  display: none;
+
+  @media (width >= 750px) {
+    display: block;
+  }
+}
+
+.siteheader__hamburger {
+  display: block;
+
+  @media (width >= 750px) {
+    display: none;
+  }
+}

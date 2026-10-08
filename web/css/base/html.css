@@ -1,0 +1,14 @@
+/* ===========================================
+=html
+=========================================== */
+
+html {
+  font: 400 100%/1.5 var(--fontstack-main);
+
+  scrollbar-gutter: stable;
+  scrollbar-color: var(--color-accent) transparent;
+}
+
+html:has(.mobilemenu[open]) {
+  overflow-y: hidden;
+}

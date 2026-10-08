@@ -1,0 +1,11 @@
+/* ===========================================
+=body
+=========================================== */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bkg-primary);
+  color: var(--color-txt-primary);
+  font-size: var(--fontsize-base);
+}

@@ -1,0 +1,53 @@
+/* ===========================================
+=footer
+=========================================== */
+
+.footer {
+  --footer-gap: 24px;
+
+  border-block-start: 1px solid var(--color-border-primary);
+}
+
+.footer__main {
+  padding-block: clamp(30px, 5vi, 60px);
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "logo"
+    "nav"
+    "social"
+    "legal";
+  gap: var(--footer-gap);
+
+  @media (width >= 500px) {
+    --footer-gap: 18px;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "logo logo   logo"
+      "nav  social legal";
+  }
+
+  @media (width >= 750px) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-areas: "nav social legal logo";
+  }
+}
+
+.footer__logo {
+  grid-area: logo;
+
+  @media (width >= 750px) {
+    justify-self: end;
+  }
+}
+.footer__nav {
+  grid-area: nav;
+}
+.footer__social {
+  grid-area: social;
+}
+.footer__legal {
+  grid-area: legal;
+}

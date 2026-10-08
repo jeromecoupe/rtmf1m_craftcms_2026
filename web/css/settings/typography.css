@@ -1,0 +1,21 @@
+/* ===========================================
+=typography settings
+=========================================== */
+
+:root {
+  /* font stacks */
+  --fontstack-main: "Supreme", system-ui, sans-serif;
+  --fontstack-alt: "Recia", "Georgia", serif;
+
+  /* font sizes */
+  /* Base one: https://www.modularscale.com/?18,16&px&1.333 */
+  --fontsize-md: clamp(18/16 * 1rem, 1.025rem + 0.319vi, 21/16 * 1rem);
+  --fontsize-base: clamp(1rem, 0.934rem + 0.213vi, 18/16 * 1rem);
+  --fontsize-sm: calc(14/16 * 1rem);
+  --fontsize-xs: calc(12/16 * 1rem);
+
+  --fontsize-h1: clamp(28/16 * 1rem, 1.251rem + 1.596vi, 43/16 * 1rem);
+  --fontsize-h2: clamp(24/16 * 1rem, 1.068rem + 1.383vi, 37/16 * 1rem);
+  --fontsize-h3: clamp(21/16 * 1rem, 0.947rem + 1.17vi, 32/16 * 1rem);
+  --fontsize-h4: clamp(18/16 * 1rem, 1.025rem + 0.319vi, 21/16 * 1rem);
+}
