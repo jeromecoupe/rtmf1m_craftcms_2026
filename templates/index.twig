@@ -1,13 +1,26 @@
 {# template to extend #}
-{% extends "layouts/base.twig" %}
+{% extends "_layouts/base.twig" %}
+
+{# Template variables #}
+{#
+  A part si on l'interdit explicitement (with_context: false), les variables définies dans un template sont accessible par tous les autres templates inclus ou étendus (Contexte global de Twig)
+  - Une variable définie dans ce template est accessible dans le template qui est étendu (layouts/base.twig)
+#}
+{% set metaTitle = "Music stories and interviews" %}
 
 {# content block #}
 {% block content %}
+
   <main class="maincontent">
-    
-    {# intro section #}
     <div class="section">
       <div class="wrapper wrapper--md">
+        {# 
+          Craft fait du routing
+          - Il sait que quand on lui demande une URL qui correspond à celle de la homepage, il doit charger le template index.twig (on lui a dit quand on a créé la section)
+          - Il sait aussi que la section homepage ne contient qu'une et une seule entry (puisque c'est une section de type single)
+          - Il sait donc à quelle entry précisément correspond cette URL et quel template il doit charger
+            - Il rend automatiquement disponible dans ce template une variable "entry" qui est ... un gros objet ... qui contient tous les champs de la seule et unique entry de la setion homePage.
+        #}
         <div class="homeintro">
           <div class="homeintro__main">
             <h1 class="sr-only">Musicmag</h1>
@@ -19,13 +32,10 @@
               height="96"
               decoding="async" />
             <p class="homeintro__tagline">
-              <span>From the heart of Belgium</span>
+              <span>{{ entry.homeTagline }}</span>
             </p>
           </div>
-          <p class="homeintro__text">
-            Online articles, interviews and stories about the world of music.
-            Created by humans for humans.
-          </p>
+          <p class="homeintro__text">{{ entry.homeIntro }}</p>
         </div>
       </div>
     </div>
@@ -54,7 +64,7 @@
         {#
           On boucle sur le tableau d'objets, chaque fois qu'on en trouve un, on le met dans une variable "item" et on affiche les propriétés de chaque objet avec les "handles" des champs qu'on a attachés aux entries via le entry_type de la section
 
-          Inclusion du template "includes/storycard.twig"
+          Inclusion du template "_includes/storycard.twig"
           - on lui passe la variable 'item' qu'on assigne à la variable 'entry'
           - on l'isole du contexte de Twig (cet include n'a accès à aucune variable à part celles qu'on lui passe explicitement)
         #}
@@ -62,7 +72,7 @@
 
           {% if loop.first %}<ul class="grid grid--gap grid--2cols-md">{% endif %}
             <li>
-              {{ include("includes/storycard.twig", {
+              {{ include("_includes/storycard.twig", {
                 entry: item,
                 isBig: true
               }, with_context: false) }}
@@ -103,7 +113,7 @@
 
           {% if loop.first %}<ul class="grid grid--gap grid--2cols-md grid--4cols-lg">{% endif %}
             <li>
-              {{ include("includes/storycard.twig", {
+              {{ include("_includes/storycard.twig", {
                 entry: item
               }, with_context: false) }}
             </li>

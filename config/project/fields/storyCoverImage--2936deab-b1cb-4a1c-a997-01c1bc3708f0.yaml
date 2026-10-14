@@ -1,0 +1,36 @@
+columnSuffix: null
+handle: storyCoverImage
+instructions: 'Image displayed on detail page. Image must be JPG 1500x1125'
+name: 'Cover Image'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: false
+  allowedKinds:
+    - image
+  branchLimit: null
+  defaultPlacement: end
+  defaultUploadLocationSource: 'volume:c8149cdb-0fbf-4155-bd16-53db60c8a979' # Stories Images
+  defaultUploadLocationSubpath: null
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: 1
+  previewMode: full
+  restrictFiles: true
+  restrictLocation: true
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:5dbe5291-357d-424d-911c-274317cb551f' # Stories Cover Images
+  restrictedLocationSubpath: null
+  selectionLabel: 'Add image'
+  showSearchInput: false
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: true
+  viewMode: thumbs
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Assets

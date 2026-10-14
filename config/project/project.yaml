@@ -1,9 +1,16 @@
-dateModified: 1790083007
+dateModified: 1791992426
 email:
   fromEmail: jercoupe@gmail.com
   fromName: musicmag
   transportType: craft\mail\transportadapters\Sendmail
 fs:
+  storiesCoverImages:
+    hasUrls: true
+    name: 'Stories Cover Images'
+    settings:
+      path: '@assetsBasePath/stories_cover_images'
+    type: craft\fs\Local
+    url: '@assetsBaseUrl/stories_cover_images'
   storiesImages:
     hasUrls: true
     name: 'Stories Images'
@@ -13,15 +20,26 @@ fs:
     url: '@assetsBaseUrl/stories_images'
 meta:
   __names__:
+    1b297a40-4bb2-4780-9199-83d08ffb058c: Author # Author
+    1ca3912e-e9f2-4537-8741-2ea74c53bca0: Tagline # Tagline
+    5dbe5291-357d-424d-911c-274317cb551f: 'Stories Cover Images' # Stories Cover Images
     5f666bf0-c4ad-4e4b-b887-635f9576f5dc: musicmag # musicmag
     7e0f4cfb-96bd-430e-93b7-67ee51af6f93: musicmag # musicmag
     69d50bea-edb7-43b6-9603-ae2e1ea756c6: Image # Image
+    2936deab-b1cb-4a1c-a997-01c1bc3708f0: 'Cover Image' # Cover Image
     4247c2e4-8237-46f6-9b43-21dbc8db81fe: Stories # Stories
     6273a8af-b5b8-4d44-9914-d9b62c3cf2d7: Stories # Stories
+    a0294314-da43-4183-bd9e-2fee55402a49: Intro # Intro
     b125a23d-fac4-41fe-8759-44d179a91f4f: 'Home Page' # Home Page
+    bbebafa1-39ab-4707-b57a-9ff359ecc667: Intro # Intro
     c75e7b14-fa78-4e38-8ef7-1e0ced02d973: Homepage # Homepage
     c8149cdb-0fbf-4155-bd16-53db60c8a979: 'Stories Images' # Stories Images
     e672f515-d214-41e1-a0ce-5c1833151c60: Type # Type
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 5.6.0.0
 system:
   edition: solo
   live: true

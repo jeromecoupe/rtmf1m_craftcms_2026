@@ -12,9 +12,11 @@ A small web project to learn the basics of Craft CMS by Pixel&Tonic.
 - [x] Retrieving some entries and displaying fields
 - [x] Add CSS, JS and non user uploaded asssets
 - [x] Modular DRY approach: includes and template inheritance
+- [ ] Add SEO variables: metaTitle, metaDescription, metaImage
 - [ ] Header and navigation
-- [ ] Footer and navigation
-- [ ] Home page fields and template
+- [x] Footer
+- [x] Home page fields and template
+- [x] Story detail page main fields and template
+- [ ] Story detail page Matrix field (modular body) and template
 - [ ] Story archives template
-- [ ] Story detail page fields and template
 - [ ] Magazine page fields and template

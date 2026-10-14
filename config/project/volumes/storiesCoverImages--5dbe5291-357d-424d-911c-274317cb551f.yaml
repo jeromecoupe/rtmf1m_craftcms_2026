@@ -1,0 +1,74 @@
+altTranslationKeyFormat: null
+altTranslationMethod: none
+fieldLayouts:
+  cad9c190-ec61-4379-bd9d-57dec7e6cad7:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2026-10-14T14:55:52+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: ee734792-75df-4619-9099-7a0099a459d1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            attribute: alt
+            class: null
+            cols: null
+            dateAdded: '2026-10-14T14:57:37+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: true
+            required: true
+            rows: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AltField
+            uid: 08f00777-a404-4c71-862a-fae11eaf1331
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c400d754-0b52-4e30-a014-740b78f7da0c
+        userCondition: null
+    thumbFieldKey: null
+fs: storiesCoverImages
+handle: storiesCoverImages
+name: 'Stories Cover Images'
+sortOrder: 2
+subpath: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: ''
+transformSubpath: ''

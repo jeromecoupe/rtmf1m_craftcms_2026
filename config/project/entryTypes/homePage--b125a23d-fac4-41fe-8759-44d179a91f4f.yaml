@@ -9,30 +9,36 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            dateAdded: '2026-09-22T12:55:34+00:00'
-            disabled: false
+            dateAdded: '2026-10-14T13:01:41+00:00'
+            editCondition: null
             elementCondition: null
-            id: null
-            inputType: null
+            elementEditCondition: null
+            fieldUid: 1ca3912e-e9f2-4537-8741-2ea74c53bca0 # Tagline
+            handle: null
             instructions: null
             label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
+            oldFieldUid: null
             required: true
-            size: null
-            step: null
             tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 2a504a6c-1de3-4e49-8384-00e7880b47ef
+            type: craft\fieldlayoutelements\CustomField
+            uid: b90021c4-955b-47dd-a211-f3166e34fb50
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-14T13:01:41+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: bbebafa1-39ab-4707-b57a-9ff359ecc667 # Intro
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9d81c58b-1932-4340-af42-260b36814759
             userCondition: null
             warning: null
             width: 100
@@ -40,8 +46,8 @@ fieldLayouts:
         uid: 76fd65a1-3cd8-44f4-9e54-3b7f0c99ddc2
         userCondition: null
     thumbFieldKey: null
-handle: homePage
-hasTitleField: true
+handle: Homepage
+hasTitleField: false
 icon: null
 name: 'Home Page'
 showSlugField: true
@@ -51,4 +57,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-uiLabelFormat: '{title}'
+uiLabelFormat: Homepage
