@@ -19,22 +19,21 @@
   color: var(--color-txt-primary);
 
   opacity: 0;
-  display: none;
 
   transition-property: opacity, display, overlay;
   transition-duration: 0.3s;
   transition-behavior: allow-discrete;
 }
 
-@media (width <= 750px) {
-  .mobilemenu[open] {
-    opacity: 1;
-    display: block;
+.mobilemenu:popover-open {
+  opacity: 1;
 
-    @starting-style {
-      opacity: 0;
-      display: none;
-    }
+  @starting-style {
+    opacity: 0;
+  }
+
+  @media (width >= 750px) {
+    display: none;
   }
 }
 

@@ -5,7 +5,7 @@
 .mobilenav {
   --mobilenav-color-txt: var(--color-neutral-100);
   --mobilenav-animation-duration: 0.3s;
-  --mobilenav-stagger-delay: 0.18s;
+  --mobilenav-stagger-delay: 0.1s;
   --mobilenav-animation-easing: linear(
     0,
     0.009 1.4%,
@@ -60,7 +60,7 @@
   transition-delay: calc(var(--mobilenav-stagger-delay) * var(--navindex));
 }
 
-dialog[open] .mobilenav__link {
+.mobilemenu:popover-open .mobilenav__link {
   translate: 0 0;
   opacity: 1;
 
