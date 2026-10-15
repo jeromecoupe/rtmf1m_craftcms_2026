@@ -1,0 +1,30 @@
+{
+  "name": "rtmf1m_craftcms_2026",
+  "version": "1.0.0",
+  "description": "musicmag website",
+  "homepage": "https://github.com/jeromecoupe/rtmf1m_craftcms_2026#readme",
+  "bugs": {
+    "url": "https://github.com/jeromecoupe/rtmf1m_craftcms_2026/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeromecoupe/rtmf1m_craftcms_2026.git"
+  },
+  "license": "ISC",
+  "author": "Chinook Baix",
+  "type": "module",
+  "scripts": {
+    "css:dev": "lightningcss --bundle \"./src/css/styles.css\" -o \"./web/dist/css/styles.css\"",
+    "css:prod": "lightningcss --minify --bundle \"./src/css/styles.css\" -o \"./web/dist/css/styles.css\"",
+    "copy:images": "cpy \"./src/img/**/*\" \"./web/dist/img/\"",
+    "watch:css": "onchange \"./src/css/**/*\" -- npm run css:dev"
+  },
+  "devDependencies": {
+    "cpy-cli": "^7.0.0",
+    "lightningcss-cli": "^1.33.0",
+    "onchange": "^7.1.0"
+  },
+  "allowScripts": {
+    "lightningcss-cli@1.33.0": true
+  }
+}

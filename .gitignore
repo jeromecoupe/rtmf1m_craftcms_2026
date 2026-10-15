@@ -3,8 +3,14 @@
 /vendor
 .DS_Store
 
+# Node stuff
+/node_modules
+
 # DB backups
 /db_dumps
 
 # User uploaded assets
 /web/uploads
+
+# dist assets (comiled CSS/ JS / etc.)
+/web/dist
