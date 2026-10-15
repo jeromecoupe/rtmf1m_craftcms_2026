@@ -1,0 +1,37 @@
+{# template to extend #}
+{% extends "_layouts/base.twig" %}
+
+{# meta variables for page #}
+{% set metaTitle = "Stories archive" %}
+
+{% block content %}
+    <main class="maincontent">
+        <div class="section">
+            <div class="wrapper">
+                {# 
+                    - template chargé par une section single qui ne contient qu'une entry
+                    - craft nous donne automatiquement une variable "entry" qui contient tous nos fields
+                #}
+                <h1 class="h1">{{ entry.title }}</h1>
+
+                {# on demande à craft de nous donner toutes les entries de la section "stories" sous forme de tableau d'objets #}
+                {% set allStories = craft.entries()
+                    .section("stories")
+                    .orderBy("postDate ASC")
+                    .limit(12)
+                    .all() %}
+                
+                {% for item in allStories %}
+                    {% if loop.first %}<ul class="grid grid--gap grid--2cols-sm grid--3cols-md grid--4cols-lg">{% endif %}
+                        <li>
+                            {{ include("_includes/storycard.twig", {
+                                entry: item
+                            }, with_context: false) }}
+                        </li>
+                        {% if loop.last %}</ul>{% endif %}
+                {% endfor %}
+
+            </div>
+        </div>
+    </main>
+{% endblock %}
