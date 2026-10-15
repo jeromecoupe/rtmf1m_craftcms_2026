@@ -2,6 +2,16 @@
 
 A small web project to learn the basics of Craft CMS by Pixel&Tonic.
 
+## Install project
+
+- install DDEV (project name should be musicmag)
+- run `ddev composer install` in your terminal to install Craft CMS
+- create and modify your local `.env` file (use `.env.example` as a template)
+- if you need an app-id, run `ddev craft setup/app-id`
+- if you need a security key, run `ddev craft setup/security-key`
+- import a database backup from production
+- import assets in `/web/uploads` from production
+
 ## TODOS
 
 - [x] Missions of a CMS: routing (url), templating (Twig), Database CRUD (templates, API, Control Panel)
