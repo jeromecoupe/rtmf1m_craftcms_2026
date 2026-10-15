@@ -1,4 +1,4 @@
-dateModified: 1792051694
+dateModified: 1792052495
 email:
   fromEmail: jercoupe@gmail.com
   fromName: musicmag
@@ -27,6 +27,8 @@ meta:
     6aca2341-b32c-4e92-af8c-cec171c48407: 'Public Schema' # Public Schema
     7e0f4cfb-96bd-430e-93b7-67ee51af6f93: musicmag # musicmag
     69d50bea-edb7-43b6-9603-ae2e1ea756c6: Image # Image
+    2126c3ea-2814-41f6-a4e1-3829fe526e71: 'Stories Page' # Stories Page
+    2874a518-95a4-4f8e-9e0c-4f45d2933ab2: 'Stories Page' # Stories Page
     2936deab-b1cb-4a1c-a997-01c1bc3708f0: 'Cover Image' # Cover Image
     4247c2e4-8237-46f6-9b43-21dbc8db81fe: Stories # Stories
     6273a8af-b5b8-4d44-9914-d9b62c3cf2d7: Stories # Stories
