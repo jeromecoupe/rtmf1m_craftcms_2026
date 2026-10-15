@@ -1,4 +1,4 @@
-dateModified: 1792049872
+dateModified: 1792051392
 email:
   fromEmail: jercoupe@gmail.com
   fromName: musicmag
@@ -18,6 +18,10 @@ fs:
       path: '@assetsBasePath/stories_images'
     type: craft\fs\Local
     url: '@assetsBaseUrl/stories_images'
+graphql:
+  publicToken:
+    enabled: false
+    expiryDate: null
 meta:
   __names__:
     1b297a40-4bb2-4780-9199-83d08ffb058c: Author # Author
