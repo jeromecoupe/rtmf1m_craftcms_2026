@@ -1,4 +1,4 @@
-dateModified: 1792051392
+dateModified: 1792051694
 email:
   fromEmail: jercoupe@gmail.com
   fromName: musicmag
@@ -18,16 +18,13 @@ fs:
       path: '@assetsBasePath/stories_images'
     type: craft\fs\Local
     url: '@assetsBaseUrl/stories_images'
-graphql:
-  publicToken:
-    enabled: false
-    expiryDate: null
 meta:
   __names__:
     1b297a40-4bb2-4780-9199-83d08ffb058c: Author # Author
     1ca3912e-e9f2-4537-8741-2ea74c53bca0: Tagline # Tagline
     5dbe5291-357d-424d-911c-274317cb551f: 'Stories Cover Images' # Stories Cover Images
     5f666bf0-c4ad-4e4b-b887-635f9576f5dc: musicmag # musicmag
+    6aca2341-b32c-4e92-af8c-cec171c48407: 'Public Schema' # Public Schema
     7e0f4cfb-96bd-430e-93b7-67ee51af6f93: musicmag # musicmag
     69d50bea-edb7-43b6-9603-ae2e1ea756c6: Image # Image
     2936deab-b1cb-4a1c-a997-01c1bc3708f0: 'Cover Image' # Cover Image
