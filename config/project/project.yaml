@@ -1,4 +1,4 @@
-dateModified: 1791992426
+dateModified: 1792049872
 email:
   fromEmail: jercoupe@gmail.com
   fromName: musicmag
@@ -41,7 +41,7 @@ plugins:
     enabled: true
     schemaVersion: 5.6.0.0
 system:
-  edition: solo
+  edition: pro
   live: true
   name: musicmag
   schemaVersion: 5.11.0.2
