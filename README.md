@@ -11,6 +11,12 @@ A small web project to learn the basics of Craft CMS by Pixel&Tonic.
 - if you need a security key, run `ddev craft setup/security-key`
 - import a database backup from production
 - import assets in `/web/uploads` from production
+- run `npm install` for NPM dependencies
+
+## Development
+
+- run `npm run build` to build and compile assets
+- run `npm run dev` to launch a development server
 
 ## TODOS
 

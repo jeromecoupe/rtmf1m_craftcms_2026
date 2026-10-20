@@ -16,15 +16,17 @@
   "scripts": {
     "css:dev": "lightningcss --bundle \"./src/css/styles.css\" -o \"./web/dist/css/styles.css\"",
     "css:prod": "lightningcss --minify --bundle \"./src/css/styles.css\" -o \"./web/dist/css/styles.css\"",
-    "copy:images": "cpy \"./src/img/**/*\" \"./web/dist/img/\"",
+    "copy:images": "copyfiles -u 1 \"./src/img/**/*\" \"./web/dist/\"",
+    "copy:fonts": "copyfiles -u 1 \"./src/fonts/**/*\" \"./web/dist/\"",
     "watch:css": "onchange \"./src/css/**/*\" -- npm run css:dev"
   },
   "devDependencies": {
-    "cpy-cli": "^7.0.0",
+    "copyfiles": "^2.4.1",
     "lightningcss-cli": "^1.33.0",
     "onchange": "^7.1.0"
   },
   "allowScripts": {
-    "lightningcss-cli@1.33.0": true
+    "lightningcss-cli@1.33.0": true,
+    "fsevents@2.3.3": true
   }
 }
