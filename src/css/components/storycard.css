@@ -97,7 +97,7 @@
   content: "";
   padding: var(--icon-padding);
   background-color: var(--color-accent);
-  background-image: url(../../img/icon_more.svg);
+  background-image: url(../img/icon_more.svg);
   background-size: var(--icon-size);
   background-repeat: no-repeat;
   background-position: 50% 50%;

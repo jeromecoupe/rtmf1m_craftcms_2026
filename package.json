@@ -18,9 +18,12 @@
     "css:prod": "lightningcss --minify --bundle \"./src/css/styles.css\" -o \"./web/dist/css/styles.css\"",
     "copy:images": "copyfiles -u 1 \"./src/img/**/*\" \"./web/dist/\"",
     "copy:fonts": "copyfiles -u 1 \"./src/fonts/**/*\" \"./web/dist/\"",
-    "watch:css": "onchange \"./src/css/**/*\" -- npm run css:dev"
+    "watch:css": "onchange \"./src/css/**/*\" -- npm run css:dev",
+    "build": "concurrently \"npm run copy:images\" \"npm run copy:fonts\" \"npm run css:prod\"",
+    "dev": "concurrently \"npm run watch:css\""
   },
   "devDependencies": {
+    "concurrently": "^10.0.6",
     "copyfiles": "^2.4.1",
     "lightningcss-cli": "^1.33.0",
     "onchange": "^7.1.0"
