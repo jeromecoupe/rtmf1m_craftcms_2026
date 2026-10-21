@@ -1,0 +1,37 @@
+columnSuffix: null
+handle: mxImage
+instructions: null
+name: image
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: false
+  allowedKinds:
+    - image
+  branchLimit: null
+  defaultPlacement: end
+  defaultUploadLocationSource: 'volume:a2e10d41-ea5d-417f-8135-ec4de137c8dc' # Stories Body Images
+  defaultUploadLocationSubpath: null
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: 1
+  previewMode: full
+  restrictFiles: true
+  restrictLocation: false
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:c8149cdb-0fbf-4155-bd16-53db60c8a979' # Stories Images
+  restrictedLocationSubpath: null
+  selectionLabel: 'add image'
+  showSearchInput: false
+  showSiteMenu: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  sources:
+    - 'volume:a2e10d41-ea5d-417f-8135-ec4de137c8dc' # Stories Body Images
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: thumbs
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Assets

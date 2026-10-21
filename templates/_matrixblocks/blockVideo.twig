@@ -1,0 +1,19 @@
+{% set entry = entry ?? null %}
+{% set id = entry.mxVideoId ?? null %}
+{% set caption = entry.commonCaption ?? null %}
+
+<div class="story__bodymedia">
+    <figure class="figure">
+        <iframe
+            class="fluidvideo"
+            src="https://www.youtube.com/embed/{{ id }}"
+            allowfullscreen
+        >
+        </iframe>
+        <figcaption class="figure__caption">
+            <p>
+                {{ caption }}
+            </p>
+        </figcaption>
+    </figure>
+</div>

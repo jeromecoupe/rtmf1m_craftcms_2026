@@ -32,7 +32,8 @@ A small web project to learn the basics of Craft CMS by Pixel&Tonic.
 - [x] Footer
 - [x] Home page fields and template
 - [x] Story detail page main fields and template
-- [ ] Story detail page Matrix field (modular body) and template
+- [x] Story detail page Matrix field (modular body) and template
+  - [ ] Add image block
 - [ ] Header and navigation
 - [ ] Story archives template
 - [ ] Magazine page fields and template

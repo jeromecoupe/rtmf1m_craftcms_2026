@@ -1,0 +1,53 @@
+columnSuffix: null
+handle: modularBody
+instructions: null
+name: Body
+searchable: false
+settings:
+  createButtonLabel: 'New Block'
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - c9ced124-5709-4732-ae1f-d50ed9d1bc23 # Block text
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 87e2e4bf-1279-4013-aa49-66e629498c6c # Block Quote
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 31fc05a3-4c70-47ad-a82a-49c7dd864427 # Block Image
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 026ad0ff-6f79-412a-8ebe-20bafc6483c6 # Block Video
+        -
+          - group
+          - General
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix
