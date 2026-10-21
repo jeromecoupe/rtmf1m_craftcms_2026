@@ -8,6 +8,8 @@
 #}
 {% set metaTitle = entry.seoTitle ?? "Music stories and interviews" %}
 {% set metaDescription = entry.seoDescription ?? entry.homeIntro %}
+{% set metaUrl = entry.url %}
+{% set metaImage = "#{ alias('@baseUrl/dist/img/socialmedia.jpg')}" %}
 
 {# content block #}
 {% block content %}
