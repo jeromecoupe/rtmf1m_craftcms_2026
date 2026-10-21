@@ -6,55 +6,56 @@ email:
 fs:
   storiesBodyImages:
     hasUrls: true
-    name: "Stories Body Images"
+    name: 'Stories Body Images'
     settings:
-      path: "@assetsBasePath/stories_body_images"
+      path: '@assetsBasePath/stories_body_images'
     type: craft\fs\Local
-    url: "@assetsBaseUrl/stories_body_images"
+    url: '@assetsBaseUrl/stories_body_images'
   storiesCoverImages:
     hasUrls: true
-    name: "Stories Cover Images"
+    name: 'Stories Cover Images'
     settings:
-      path: "@assetsBasePath/stories_cover_images"
+      path: '@assetsBasePath/stories_cover_images'
     type: craft\fs\Local
-    url: "@assetsBaseUrl/stories_cover_images"
+    url: '@assetsBaseUrl/stories_cover_images'
   storiesImages:
     hasUrls: true
-    name: "Stories Images"
+    name: 'Stories Images'
     settings:
-      path: "@assetsBasePath/stories_images"
+      path: '@assetsBasePath/stories_images'
     type: craft\fs\Local
-    url: "@assetsBaseUrl/stories_images"
+    url: '@assetsBaseUrl/stories_images'
 meta:
   __names__:
     1b297a40-4bb2-4780-9199-83d08ffb058c: Author # Author
     1ca3912e-e9f2-4537-8741-2ea74c53bca0: Tagline # Tagline
-    5dbe5291-357d-424d-911c-274317cb551f: "Stories Cover Images" # Stories Cover Images
+    5dbe5291-357d-424d-911c-274317cb551f: 'Stories Cover Images' # Stories Cover Images
     5f666bf0-c4ad-4e4b-b887-635f9576f5dc: musicmag # musicmag
-    6aca2341-b32c-4e92-af8c-cec171c48407: "Public Schema" # Public Schema
+    6aca2341-b32c-4e92-af8c-cec171c48407: 'Public Schema' # Public Schema
     7e0f4cfb-96bd-430e-93b7-67ee51af6f93: musicmag # musicmag
-    026ad0ff-6f79-412a-8ebe-20bafc6483c6: "Block Video" # Block Video
-    31fc05a3-4c70-47ad-a82a-49c7dd864427: "Block Image" # Block Image
+    026ad0ff-6f79-412a-8ebe-20bafc6483c6: 'Block Video' # Block Video
+    31fc05a3-4c70-47ad-a82a-49c7dd864427: 'Block Image' # Block Image
     59bcebd7-8dd5-4f72-b81b-93d6e0b5a4fe: quote # quote
     69d50bea-edb7-43b6-9603-ae2e1ea756c6: Image # Image
-    87e2e4bf-1279-4013-aa49-66e629498c6c: "Block Quote" # Block Quote
-    517bda3d-f300-4091-8f8c-45a1a50f0178: "Text " # Text
-    2126c3ea-2814-41f6-a4e1-3829fe526e71: "Stories Page" # Stories Page
-    2874a518-95a4-4f8e-9e0c-4f45d2933ab2: "Stories Page" # Stories Page
-    2936deab-b1cb-4a1c-a997-01c1bc3708f0: "Cover Image" # Cover Image
+    87e2e4bf-1279-4013-aa49-66e629498c6c: 'Block Quote' # Block Quote
+    517bda3d-f300-4091-8f8c-45a1a50f0178: 'Text ' # Text
+    2126c3ea-2814-41f6-a4e1-3829fe526e71: 'Stories Page' # Stories Page
+    2874a518-95a4-4f8e-9e0c-4f45d2933ab2: 'Stories Page' # Stories Page
+    2936deab-b1cb-4a1c-a997-01c1bc3708f0: 'Cover Image' # Cover Image
     4247c2e4-8237-46f6-9b43-21dbc8db81fe: Stories # Stories
     6273a8af-b5b8-4d44-9914-d9b62c3cf2d7: Stories # Stories
-    7249c95e-d560-4f02-adc5-c37962807f39: "Video ID" # Video ID
+    7249c95e-d560-4f02-adc5-c37962807f39: 'Video ID' # Video ID
     08307daf-0d50-4820-93f9-26405cf5dd96: Caption # Caption
     0365083c-efe5-4d39-aba8-61548c931c76: Body # Body
     a0294314-da43-4183-bd9e-2fee55402a49: Intro # Intro
+    a2e10d41-ea5d-417f-8135-ec4de137c8dc: 'Stories Body Images' # Stories Body Images
     b9449711-683b-45dd-ad55-6a16d73421f1: image # image
-    bb0b1850-b16c-4f40-b62f-4364593010c3: "SEO Title" # SEO Title
+    bb0b1850-b16c-4f40-b62f-4364593010c3: 'SEO Title' # SEO Title
     bbebafa1-39ab-4707-b57a-9ff359ecc667: Intro # Intro
     c75e7b14-fa78-4e38-8ef7-1e0ced02d973: Homepage # Homepage
-    c8149cdb-0fbf-4155-bd16-53db60c8a979: "Stories Images" # Stories Images
+    c8149cdb-0fbf-4155-bd16-53db60c8a979: 'Stories Images' # Stories Images
     e672f515-d214-41e1-a0ce-5c1833151c60: Type # Type
-    f5d674e4-5ca5-4fa2-b4fc-c3795bdde358: "SEO Description" # SEO Description
+    f5d674e4-5ca5-4fa2-b4fc-c3795bdde358: 'SEO Description' # SEO Description
 plugins:
   ckeditor:
     edition: standard

@@ -2,7 +2,7 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: b125a23d-fac4-41fe-8759-44d179a91f4f # Home Page
+    uid: b125a23d-fac4-41fe-8759-44d179a91f4f
 handle: homePage
 maxAuthors: 1
 minAuthors: 1

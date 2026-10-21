@@ -12,7 +12,7 @@ settings:
       __assoc__:
         -
           - uid
-          - c9ced124-5709-4732-ae1f-d50ed9d1bc23 # Block text
+          - c9ced124-5709-4732-ae1f-d50ed9d1bc23
         -
           - group
           - General
