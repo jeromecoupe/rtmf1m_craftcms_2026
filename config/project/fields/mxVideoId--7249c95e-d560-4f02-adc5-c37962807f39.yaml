@@ -1,0 +1,16 @@
+columnSuffix: null
+handle: mxVideoId
+instructions: 'Type the id of a Youtube video. If a video has the URL "https://www.youtube.com/watch?v=bsYp9q3QNaQ" the ID is "bsYp9q3QNaQ"'
+name: 'Video ID'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 32
+  code: false
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

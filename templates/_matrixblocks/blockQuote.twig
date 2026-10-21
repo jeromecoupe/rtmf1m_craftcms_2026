@@ -1,0 +1,14 @@
+{% set entry = entry ?? null %}
+{% set quote = entry.mxQuoteText ?? null %}
+{% set author = entry.mxQuoteAuthor ?? null %}
+
+<div class="story__bodyquote">
+    <figure class="quote">
+        <blockquote class="quote__text">
+            <p>{{ quote }}</p>
+        </blockquote>
+        <figcaption class="quote__caption">
+            <p>{{ author }}</p>
+        </figcaption>
+    </figure>
+</div>
