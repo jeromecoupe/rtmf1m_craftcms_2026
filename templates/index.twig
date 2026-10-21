@@ -6,7 +6,8 @@
   A part si on l'interdit explicitement (with_context: false), les variables définies dans un template sont accessible par tous les autres templates inclus ou étendus (Contexte global de Twig)
   - Une variable définie dans ce template est accessible dans le template qui est étendu (layouts/base.twig)
 #}
-{% set metaTitle = "Music stories and interviews" %}
+{% set metaTitle = entry.seoTitle ?? "Music stories and interviews" %}
+{% set metaDescription = entry.seoDescription ?? entry.homeIntro %}
 
 {# content block #}
 {% block content %}

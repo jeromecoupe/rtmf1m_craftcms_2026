@@ -1,6 +1,7 @@
 /.env
 /.idea
 /vendor
+/.vscode
 .DS_Store
 
 # Node stuff
