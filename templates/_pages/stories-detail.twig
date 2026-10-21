@@ -2,8 +2,13 @@
 {% extends "_layouts/base.twig" %}
 
 {# Template variables #}
+{% set socialImg = entry.storyCoverImage.one() %}
+{% set socialImgUrl = socialImg.getUrl({ width: 1024, height: 1024}) %}
+
 {% set metaTitle = entry.seoTitle ?? entry.title %}
 {% set metaDescription = entry.seoDescription ?? entry.commonIntro %}
+{% set metaImage = socialImgUrl ?? "#{ alias('@baseUrl/dist/img/socialmedia.jpg')}" %}
+{% set metaUrl = entry.url %}
 
 {% block content %}
   {# 
