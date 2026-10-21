@@ -45,6 +45,46 @@ fieldLayouts:
         name: Content
         uid: 76fd65a1-3cd8-44f4-9e54-3b7f0c99ddc2
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-10-21T08:45:01+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: bb0b1850-b16c-4f40-b62f-4364593010c3 # SEO Title
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 87cb0c8f-f3cb-4fa1-b32d-6c97d01fe1aa
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-21T08:45:01+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: f5d674e4-5ca5-4fa2-b4fc-c3795bdde358 # SEO Description
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 35a15be1-61fb-4344-b9c8-a1084218c5cc
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: d0d7e3d6-e43d-4a58-be98-db8fc6805295
+        userCondition: null
     thumbFieldKey: null
 handle: Homepage
 hasTitleField: false

@@ -2,7 +2,8 @@
 {% extends "_layouts/base.twig" %}
 
 {# Template variables #}
-{% set metaTitle = entry.title %}
+{% set metaTitle = entry.seoTitle ?? entry.title %}
+{% set metaDescription = entry.seoDescription ?? entry.commonIntro %}
 
 {% block content %}
   {# 
@@ -59,9 +60,9 @@
             <div class="wrapper">
               <div class="story__body">
                 <div class="story__bodytext">
-                  <div class="lead">
-                    {{ entry.storyIntro }}
-                  </div>
+                  <p class="lead">
+                    {{ entry.commonIntro }}
+                  </p>
                   <p>
                     Within seconds of walking into the room, Keith Richards has
                     put your correspondent at ease with the simplest of

@@ -39,6 +39,46 @@ fieldLayouts:
         name: Content
         uid: d4f33080-fe20-4855-b8c3-3615fa8cd08e
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-10-21T08:46:45+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: bb0b1850-b16c-4f40-b62f-4364593010c3 # SEO Title
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 16bd04e7-5f6f-4514-8743-5a37ede44699
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-21T08:46:45+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: f5d674e4-5ca5-4fa2-b4fc-c3795bdde358 # SEO Description
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 536e7a01-4442-4bd6-92d6-ee9aa782e137
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 6ab4ae50-0fc7-4f27-aa20-3e32167eb9a7
+        userCondition: null
     thumbFieldKey: null
 handle: storiesPage
 hasTitleField: true

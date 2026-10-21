@@ -2,7 +2,8 @@
 {% extends "_layouts/base.twig" %}
 
 {# meta variables for page #}
-{% set metaTitle = "Stories archive" %}
+{% set metaTitle = entry.seoTitle ?? entry.title %}
+{% set metaDescription = entry.seoDescription ?? "Our stories and interviews over the years" %}
 
 {% block content %}
     <main class="maincontent">

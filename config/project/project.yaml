@@ -1,4 +1,4 @@
-dateModified: 1792052495
+dateModified: 1792572484
 email:
   fromEmail: jercoupe@gmail.com
   fromName: musicmag
@@ -34,10 +34,12 @@ meta:
     6273a8af-b5b8-4d44-9914-d9b62c3cf2d7: Stories # Stories
     a0294314-da43-4183-bd9e-2fee55402a49: Intro # Intro
     b125a23d-fac4-41fe-8759-44d179a91f4f: 'Home Page' # Home Page
+    bb0b1850-b16c-4f40-b62f-4364593010c3: 'SEO Title' # SEO Title
     bbebafa1-39ab-4707-b57a-9ff359ecc667: Intro # Intro
     c75e7b14-fa78-4e38-8ef7-1e0ced02d973: Homepage # Homepage
     c8149cdb-0fbf-4155-bd16-53db60c8a979: 'Stories Images' # Stories Images
     e672f515-d214-41e1-a0ce-5c1833151c60: Type # Type
+    f5d674e4-5ca5-4fa2-b4fc-c3795bdde358: 'SEO Description' # SEO Description
 plugins:
   ckeditor:
     edition: standard
