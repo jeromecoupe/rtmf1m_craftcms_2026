@@ -1,6 +1,6 @@
 columnSuffix: null
 handle: mxImage
-instructions: null
+instructions: 'Image must be 1500 pixel wide. The system will resize images for you.'
 name: image
 searchable: false
 settings:
@@ -24,7 +24,7 @@ settings:
   restrictedLocationSubpath: null
   selectionLabel: 'add image'
   showSearchInput: false
-  showSiteMenu: false
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources:

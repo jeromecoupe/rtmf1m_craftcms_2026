@@ -1,27 +1,29 @@
-{# 
-    @TODO
-    - create image block entry Type and fields
-        - mxBodyImage
-        - commonCaption
-    - add it to Matrix field (modularbody)
-    - add variables and template code
-#}
+{% set entry = entry ?? null %}
+{% set img = entry.mxImage.one() ?? null %}
+{% set caption = entry.commonCaption ?? null %}
 
-<p>THIS NEEDS TO BE DONE</p>
 <div class="story__bodymedia">
     <figure class="figure">
-        <img
-            src="img/stories/content/keith-richards-smoking.jpg"
-            class="fluidimg"
-            width="1024"
-            height="768"
-            loading="lazy"
-            decoding="async"
-            alt=""
-        />
+        {% if img %}
+            <img
+                src="{{ img.getUrl({ width: 800 }) }}"
+                srcset="
+                    {{ img.getUrl({ width: 800 }) }} 800w,
+                    {{ img.getUrl({ width: 1024 }) }} 1024w,
+                    {{ img.getUrl({ width: 1500 }) }} 1500w
+                "
+                sizes="auto"
+                class="fluidimg"
+                width="{{ img.width }}"
+                height="{{ img.height }}"
+                loading="lazy"
+                decoding="async"
+                alt=""
+            />
+        {% endif %}
         <figcaption class="figure__caption">
             <p>
-                Black and white picture of Keith Richards lighting a cigarette
+            {{ entry.commonCaption }}
             </p>
         </figcaption>
     </figure>
