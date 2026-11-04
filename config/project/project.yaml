@@ -1,4 +1,4 @@
-dateModified: 1792593145
+dateModified: 1793802522
 email:
   fromEmail: jercoupe@gmail.com
   fromName: musicmag
@@ -30,13 +30,16 @@ meta:
     1b297a40-4bb2-4780-9199-83d08ffb058c: Author # Author
     1ca3912e-e9f2-4537-8741-2ea74c53bca0: Tagline # Tagline
     5dbe5291-357d-424d-911c-274317cb551f: 'Stories Cover Images' # Stories Cover Images
+    05e5ea43-506c-45ab-a28b-19795bc2f4d0: 'Magazine Page' # Magazine Page
     5f666bf0-c4ad-4e4b-b887-635f9576f5dc: musicmag # musicmag
     6aca2341-b32c-4e92-af8c-cec171c48407: 'Public Schema' # Public Schema
     7e0f4cfb-96bd-430e-93b7-67ee51af6f93: musicmag # musicmag
+    9fdb18d1-d0e2-422e-8355-b76c50334296: 'magazine Page' # magazine Page
     026ad0ff-6f79-412a-8ebe-20bafc6483c6: 'Block Video' # Block Video
     31fc05a3-4c70-47ad-a82a-49c7dd864427: 'Block Image' # Block Image
     59bcebd7-8dd5-4f72-b81b-93d6e0b5a4fe: quote # quote
     69d50bea-edb7-43b6-9603-ae2e1ea756c6: Image # Image
+    74ad8c03-4612-4331-a6a1-01efc369d7f5: 'magazine intro' # magazine intro
     87e2e4bf-1279-4013-aa49-66e629498c6c: 'Block Quote' # Block Quote
     517bda3d-f300-4091-8f8c-45a1a50f0178: 'Text ' # Text
     2126c3ea-2814-41f6-a4e1-3829fe526e71: 'Stories Page' # Stories Page

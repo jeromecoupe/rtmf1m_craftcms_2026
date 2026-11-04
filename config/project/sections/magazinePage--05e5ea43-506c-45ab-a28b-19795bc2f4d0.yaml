@@ -1,0 +1,22 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 9fdb18d1-d0e2-422e-8355-b76c50334296 # magazine Page
+handle: magazinePage
+maxAuthors: 1
+minAuthors: 1
+name: 'Magazine Page'
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  5f666bf0-c4ad-4e4b-b887-635f9576f5dc: # musicmag
+    enabledByDefault: true
+    hasUrls: true
+    template: _pages/magazine.twig
+    uriFormat: magazine
+type: single

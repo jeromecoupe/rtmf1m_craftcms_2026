@@ -1,0 +1,91 @@
+{# template à étendre #}
+{% extends "_layouts/base.twig" %}
+
+{# meta variables #}
+{% set metaTitle = "Magazine" %}
+{% set metaDescription = "Online articles, interviews and stories about the world of music. Created by humans for humans." %}
+{% set metaUrl = entry.url %}
+{% set metaImage = "#{ alias('@baseUrl/dist/img/socialmedia.jpg')}" %}
+
+{# page content #}
+{% block content %}
+<main class="maincontent">
+  <div class="section">
+    <div class="wrapper">
+      <div class="grid grid--colgap grid--2cols-md">
+        <div>
+          <h1 class="h1">{{ entry.title }}</h1>
+        </div>
+        <div class="richtext">
+          {{ entry.magazineIntro }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
+  <div class="section">
+    <div class="wrapper">
+      <h2 class="smalltitle">Our team</h2>
+      <ul class="grid grid--gap grid--2cols-sm grid--3cols-md">
+        <li>
+          <article class="teamcard">
+            <div class="teamcard__media">
+              <img
+                src="img/team/elijah-alrajahoui.jpg"
+                class="fluidimg"
+                width="800"
+                height="800"
+                loading="lazy"
+                decoding="async"
+                alt="Elijah Alrajahoui" />
+            </div>
+            <div class="teamcard__body">
+              <h3 class="teamcard__name">Elijah Alrajahoui</h3>
+              <p class="teamcard__role">Chief sandwiches officer</p>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="section">
+    <div class="wrapper">
+      <h2 class="smalltitle">Our offices</h2>
+      <ul class="grid grid--gap grid--2cols-md">
+        <li>
+          <article class="officecard">
+            <div class="officecard__media">
+              <img
+                src="img/offices/office-brussels.jpg"
+                class="fluidimg"
+                width="1024"
+                height="768"
+                alt="A busy street of Brussels" />
+            </div>
+            <div class="officecardcard__info">
+              <h3 class="officecard__name">Brussels Headquarters</h3>
+              <address>
+                <p>
+                  Place du marché aux fleurs 12,<br />
+                  1000 Bruxelles<br />
+                  Belgium
+                </p>
+              </address>
+              <ul class="list-bare">
+                <li>
+                  <a href="tel:003202333444">+32 02 333 444</a>
+                </li>
+                <li>
+                  <a href="#">Directions</a>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </div>
+</main>
+-->
+{% endblock %}
