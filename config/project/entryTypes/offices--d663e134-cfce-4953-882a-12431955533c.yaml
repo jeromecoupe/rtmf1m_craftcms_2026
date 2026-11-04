@@ -1,0 +1,179 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  d0ec403b-272d-475f-84bc-d7da5a6bfd4b:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2026-11-04T16:15:18+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 774a576e-e8ad-4b34-b72e-8268f5e98518
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-11-04T16:26:59+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: d4a102af-b951-4eb6-827e-b68f81b662ff # Image
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 755467d8-6085-49a0-b990-32d71a66abc3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-11-04T16:26:59+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: c350eba2-dc90-4caa-954e-8085edbe871a
+            userCondition: null
+          -
+            dateAdded: '2026-11-04T16:26:59+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: def8f3a2-ede4-4283-96bf-67d45cdf313b # Street
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0a740a67-f4dc-454a-adf5-35c461cf592e
+            userCondition: null
+            warning: null
+            width: 75
+          -
+            dateAdded: '2026-11-04T16:26:59+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 93f2af30-4009-441d-b7da-9571027e1581 # Number
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7dce2e8b-fd24-4c87-ba7f-2329ffdabd0f
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2026-11-04T16:26:59+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: ff889bcf-f79b-40d0-9250-f4b6a56c32ab # postCode
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 33a84461-af1a-4f83-9bca-467ec976fcd0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-11-04T16:26:59+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 150fc68b-8cc5-4d3f-bf70-2411cdd62cd6 # City
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8a9310b3-d76c-432c-92b1-585b5646f37e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-11-04T16:26:59+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: f1efc810-26d8-40f5-9847-fa70d045d2f0 # Téléphone
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 95fe24f2-e85d-4c65-b902-a056eb05dfd7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-11-04T16:26:59+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: df845206-eec0-4262-8b45-94015cf19b59 # Map Link
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cd91c1ec-5abf-4950-8edf-d53a7cfc5f6c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a9418ddd-a91d-49b7-8369-f16e42d300a0
+        userCondition: null
+    thumbFieldKey: null
+handle: offices
+hasTitleField: true
+icon: null
+name: Offices
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

@@ -1,0 +1,22 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: d663e134-cfce-4953-882a-12431955533c # Offices
+handle: offices
+maxAuthors: 1
+minAuthors: 1
+name: Offices
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  5f666bf0-c4ad-4e4b-b887-635f9576f5dc: # musicmag
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: channel

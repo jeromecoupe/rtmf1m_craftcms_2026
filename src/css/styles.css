@@ -35,6 +35,8 @@
 @import "components/figure.css" layer(components);
 @import "components/pagebanner.css" layer(components);
 @import "components/richtext.css" layer(components);
+@import "components/officecard.css" layer(components);
+@import "components/lists.css" layer(components);
 
 /* UTILITIES */
 @import "utilities/sr-only.css" layer(utilities);

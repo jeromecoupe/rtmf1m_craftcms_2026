@@ -1,9 +1,16 @@
-dateModified: 1793802522
+dateModified: 1793809656
 email:
   fromEmail: jercoupe@gmail.com
   fromName: musicmag
   transportType: craft\mail\transportadapters\Sendmail
 fs:
+  officesImages:
+    hasUrls: true
+    name: 'Offices Images'
+    settings:
+      path: '@assetsBasePath/offices_images'
+    type: craft\fs\Local
+    url: '@assetsBaseUrl/offices_images/'
   storiesBodyImages:
     hasUrls: true
     name: 'Stories Body Images'
@@ -34,13 +41,19 @@ meta:
     5f666bf0-c4ad-4e4b-b887-635f9576f5dc: musicmag # musicmag
     6aca2341-b32c-4e92-af8c-cec171c48407: 'Public Schema' # Public Schema
     7e0f4cfb-96bd-430e-93b7-67ee51af6f93: musicmag # musicmag
+    9a614443-855e-4089-b883-8f8801b11703: Offices # Offices
     9fdb18d1-d0e2-422e-8355-b76c50334296: 'magazine Page' # magazine Page
     026ad0ff-6f79-412a-8ebe-20bafc6483c6: 'Block Video' # Block Video
     31fc05a3-4c70-47ad-a82a-49c7dd864427: 'Block Image' # Block Image
+    34a21b9f-f0fe-468c-b8b8-b64052bb1809: nav # nav
+    54f95890-7b7c-4406-a320-b6bc7799c879: 'Offices Images' # Offices Images
     59bcebd7-8dd5-4f72-b81b-93d6e0b5a4fe: quote # quote
     69d50bea-edb7-43b6-9603-ae2e1ea756c6: Image # Image
     74ad8c03-4612-4331-a6a1-01efc369d7f5: 'magazine intro' # magazine intro
     87e2e4bf-1279-4013-aa49-66e629498c6c: 'Block Quote' # Block Quote
+    93f2af30-4009-441d-b7da-9571027e1581: Number # Number
+    150fc68b-8cc5-4d3f-bf70-2411cdd62cd6: City # City
+    271df4c2-60e1-4e46-8563-58698dd3d344: 'Main nav' # Main nav
     517bda3d-f300-4091-8f8c-45a1a50f0178: 'Text ' # Text
     2126c3ea-2814-41f6-a4e1-3829fe526e71: 'Stories Page' # Stories Page
     2874a518-95a4-4f8e-9e0c-4f45d2933ab2: 'Stories Page' # Stories Page
@@ -52,13 +65,21 @@ meta:
     0365083c-efe5-4d39-aba8-61548c931c76: Body # Body
     a0294314-da43-4183-bd9e-2fee55402a49: Intro # Intro
     a2e10d41-ea5d-417f-8135-ec4de137c8dc: 'Stories Body Images' # Stories Body Images
+    a3595b1e-269a-4418-af78-302b5076b549: 'nav entry' # nav entry
     b9449711-683b-45dd-ad55-6a16d73421f1: image # image
     bb0b1850-b16c-4f40-b62f-4364593010c3: 'SEO Title' # SEO Title
     bbebafa1-39ab-4707-b57a-9ff359ecc667: Intro # Intro
     c75e7b14-fa78-4e38-8ef7-1e0ced02d973: Homepage # Homepage
     c8149cdb-0fbf-4155-bd16-53db60c8a979: 'Stories Images' # Stories Images
+    d4a102af-b951-4eb6-827e-b68f81b662ff: Image # Image
+    d46f9d9c-3e5f-4011-8c9d-61c4267a2996: label # label
+    d663e134-cfce-4953-882a-12431955533c: Offices # Offices
+    def8f3a2-ede4-4283-96bf-67d45cdf313b: Street # Street
+    df845206-eec0-4262-8b45-94015cf19b59: 'Map Link' # Map Link
     e672f515-d214-41e1-a0ce-5c1833151c60: Type # Type
+    f1efc810-26d8-40f5-9847-fa70d045d2f0: Téléphone # Téléphone
     f5d674e4-5ca5-4fa2-b4fc-c3795bdde358: 'SEO Description' # SEO Description
+    ff889bcf-f79b-40d0-9250-f4b6a56c32ab: postCode # postCode
 plugins:
   ckeditor:
     edition: standard

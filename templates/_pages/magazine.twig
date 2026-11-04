@@ -49,43 +49,66 @@
       </ul>
     </div>
   </div>
+  -->
   <div class="section">
     <div class="wrapper">
       <h2 class="smalltitle">Our offices</h2>
-      <ul class="grid grid--gap grid--2cols-md">
+
+      {# 
+      1. créer une var allOffices et mettre dedans toutes les entries de la section offices
+      2. créer une boucle sur le tableau d'objet
+      3. afficher les champs
+      #}
+
+      {% set allOffices = craft.entries()
+        .section("offices")
+        .all() %}
+
+      {% for item in allOffices %}
+        {% if loop.first %}<ul class="grid grid--gap grid--2cols-md">{% endif %}
+
         <li>
           <article class="officecard">
             <div class="officecard__media">
-              <img
-                src="img/offices/office-brussels.jpg"
-                class="fluidimg"
-                width="1024"
-                height="768"
-                alt="A busy street of Brussels" />
+
+              {% set img = item.officeImage.one() %}
+              {% if img %}
+                <img
+                  src="{{ img.getUrl({ width:1024, height:768 }) }}"
+                  class="fluidimg"
+                  width="1024"
+                  height="768"
+                  alt="{{ img.alt }}" />
+              {% endif %}
+
             </div>
             <div class="officecardcard__info">
-              <h3 class="officecard__name">Brussels Headquarters</h3>
+              <h3 class="officecard__name">{{ item.title }}</h3>
               <address>
                 <p>
-                  Place du marché aux fleurs 12,<br />
-                  1000 Bruxelles<br />
-                  Belgium
+                  {{ item.officeStreet }} {{ item.officeNumber}} ,<br />
+                  {{ item.officePostcode }} {{ item.officeCity }}
                 </p>
               </address>
               <ul class="list-bare">
                 <li>
-                  <a href="tel:003202333444">+32 02 333 444</a>
+                  {{ item.officeTelephone }} 
                 </li>
                 <li>
-                  <a href="#">Directions</a>
+                  <a href="{{ item.officeMaplink }}">
+                    Directions
+                  </a>
                 </li>
               </ul>
             </div>
           </article>
         </li>
-      </ul>
+
+        {% if loop.last %}</ul>{% endif %}
+      {% endfor %}
+
     </div>
   </div>
 </main>
--->
+
 {% endblock %}
