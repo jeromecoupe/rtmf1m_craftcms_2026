@@ -1,0 +1,46 @@
+{# 
+  1. créer une variable "navItems" et mettre dedans toutes les engtries de la section "mainNav"
+  2. Boucler sur le tableau d'objets que Craft a renvoyé et réassigner chaque objet du tableau (ici une entry) à une variable (ici "item")
+  3. Utiliser la variable "item" de la boucle for pour afficher les champs de l'entry
+#}
+
+{# allNav contient un tableau d'objets entries #}
+{% set allNav = craft.entries()
+  .section("mainNav")
+  .all() %}
+
+<nav>
+  {# on boucle sur le tableau et chaque fois qu'on trouve une entry on l'assigne à une variable "item" qu'on utilise ensuite pour afficher les champs  #}
+  {% for item in allNav %}
+    {% if loop.first %}<ul class="mainnav">{% endif %}
+    
+      {# le champ navEntry est un champs relationnel.
+      Dans Craft, les champs remationnels (entries, assets, users) renvoient toujours un tableau d'objets #}
+
+      {# Pour afficher la seule entry du tableau on utilise la methode .one() #}
+      {% set relatedEntry = item.navEntry.one() %}
+
+      {# 
+        gestion nav active ou pas
+        - on compare les id de la relatedEntry et celle de l'entry de la page sur laquelle on se trouve et pour laquelle Craft nous donne une variable "entry" (entry.id). 
+        - si les variable sont égales, on affiche une classe CSS "is-active"
+        
+        Remarque: Dans Twig, les variable sont dans un contexte global qui est accessible à tous les templates de la châine (extends ou inlcudes) sauf si explicitement interdit (c'est le contexte global de Twig)
+      #}
+
+      {% set activeClass = "" %}
+      {% if relatedEntry.id == entry.id %}
+        {% set activeClass = "is-active" %}
+      {% endif %}
+
+      <li class="mainnav__item">
+        <a
+          class="mainnav__link {{ activeClass }}"
+          href="{{ relatedEntry.url }}">
+          {{ item.navLabel }}
+        </a>
+      </li>
+
+    {% if loop.last %}</ul>{% endif %}
+  {% endfor %}
+</nav>

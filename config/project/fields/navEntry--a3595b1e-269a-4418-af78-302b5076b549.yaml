@@ -1,0 +1,56 @@
+columnSuffix: null
+handle: navEntry
+instructions: null
+name: 'nav entry'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  defaultPlacement: end
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: 1
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Entry
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\entries\EntryCondition
+      -
+        - conditionRules
+        -
+          -
+            __assoc__:
+              -
+                - class
+                - craft\elements\conditions\entries\TypeConditionRule
+              -
+                - uid
+                - bb6596cf-017f-456d-b7da-26336106b073
+              -
+                - operator
+                - in
+              -
+                - values
+                -
+                  - b125a23d-fac4-41fe-8759-44d179a91f4f
+                  - 2126c3ea-2814-41f6-a4e1-3829fe526e71 # Stories Page
+                  - 9fdb18d1-d0e2-422e-8355-b76c50334296 # magazine Page
+  selectionLabel: 'choose an entry'
+  showSearchInput: false
+  showSiteMenu: true
+  showUnpermittedEntries: false
+  showUnpermittedSections: false
+  sources:
+    - singles
+  targetSiteId: null
+  validateRelatedElements: true
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries

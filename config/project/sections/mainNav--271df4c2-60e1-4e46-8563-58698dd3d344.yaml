@@ -1,0 +1,25 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 34a21b9f-f0fe-468c-b8b8-b64052bb1809 # nav
+handle: mainNav
+maxAuthors: 1
+minAuthors: 1
+name: 'Main nav'
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  5f666bf0-c4ad-4e4b-b887-635f9576f5dc: # musicmag
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: 1584bad7-ba03-42a4-9bda-b8b8eeeced42
+type: structure
