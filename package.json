@@ -13,10 +13,11 @@
   "license": "ISC",
   "author": "Chinook Baix",
   "type": "module",
+  "browserslist": ">=0.5% and not dead",
   "scripts": {
     "clean": "rimraf \"./web/dist\"",
     "css:dev": "lightningcss --bundle \"./src/css/styles.css\" -o \"./web/dist/css/styles.css\"",
-    "css:prod": "npm run css:dev -- --minify",
+    "css:prod": "npm run css:dev -- --minify --browserslist",
     "js:dev": "esbuild --bundle \"./src/js/scripts.js\" --outfile=\"./web/dist/js/scripts.js\"",
     "js:prod": "npm run js:dev -- --minify",
     "copy:images": "copyfiles -u 1 \"./src/img/**/*\" \"./web/dist/\"",
@@ -35,8 +36,8 @@
     "rimraf": "^6.1.3"
   },
   "allowScripts": {
-    "lightningcss-cli@1.33.0": true,
     "fsevents@2.3.3": true,
-    "esbuild@0.28.2": true
+    "esbuild@0.28.2": true,
+    "lightningcss-cli@1.33.0": true
   }
 }
